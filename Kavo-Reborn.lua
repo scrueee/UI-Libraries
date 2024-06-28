@@ -2603,18 +2603,18 @@ function Kavo.CreateLib(kavName, themeList)
             	label.BackgroundColor3 = themeList.SchemeColor
                 label.BackgroundTransparency = 1
             	label.BorderSizePixel = 0
-				label.ClipsDescendants = true
+		label.ClipsDescendants = true
             	label.Text = title
-           		label.Size = UDim2.new(0, 352, 0, 33)
-	            label.Font = Enum.Font.Gotham
-	            label.Text = "  "..title
-	            label.RichText = true
-	            label.TextColor3 = themeList.TextColor
-	            Objects[label] = "TextColor3"
-	            label.TextSize = 14.000
-	            label.TextXAlignment = Enum.TextXAlignment.Left
+           	label.Size = UDim2.new(0, 352, 0, 33)
+	        label.Font = Enum.Font.Gotham
+	    	label.Text = "  "..title
+		label.RichText = true
+		label.TextColor3 = themeList.TextColor
+		Objects[label] = "TextColor3"
+		label.TextSize = 14.000
+		label.TextXAlignment = Enum.TextXAlignment.Left
 	            
-	           	UICorner.CornerRadius = UDim.new(0, 4)
+	        UICorner.CornerRadius = UDim.new(0, 4)
                 UICorner.Parent = label
             	
 	            if themeList.SchemeColor == Color3.fromRGB(255,255,255) then
