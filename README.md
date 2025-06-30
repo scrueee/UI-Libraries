@@ -1,2 +1,3 @@
-Recreation of Kavo UI Library (by xHeptc)
+Recreation of some UI libs
+
 Recreated by scrue
