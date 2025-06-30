@@ -784,13 +784,16 @@ function SolarisLib:New(Config)
 					if not db then
 						db = true
 						Toggle.Value = not Toggle.Value
-						TweenService:Create(ToggleMain.ToggleFrame.ToggleToggled.ToggleIco,TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{ImageTransparency= Toggle.Value and 0 or 1}):Play()
-                    	TweenService:Create(ToggleMain.ToggleFrame.ToggleToggled.ToggleIco,TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Size= Toggle.Value and UDim2.new(1,-2,1,-2) or UDim2.new(1,-6,1,-6)}):Play()
-						Toggle.Value = not Toggle.Value
-                    	pcall(callback, toggled)
-                    	wait(0.01)
-                    	db = false
-					end           
+						TweenService:Create(ToggleMain.ToggleFrame.ToggleToggled.ToggleIco, TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+							ImageTransparency = Toggle.Value and 0 or 1
+						}):Play()
+						TweenService:Create(ToggleMain.ToggleFrame.ToggleToggled.ToggleIco, TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+							Size = Toggle.Value and UDim2.new(1,-2,1,-2) or UDim2.new(1,-6,1,-6)
+						}):Play()
+						pcall(callback, Toggle.Value)
+						wait(0.01)
+						db = false
+					end
 				end)
 
                 spawn(function()
